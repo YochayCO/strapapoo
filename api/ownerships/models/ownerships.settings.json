@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ownerships",
+  "info": {
+    "name": "ownerships"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "company_id": {
+      "model": "companies"
+    },
+    "owner_id": {
+      "model": "people"
+    },
+    "percentage": {
+      "type": "decimal"
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "relationships",
+  "info": {
+    "name": "relationships"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "relative1_id": {
+      "model": "people"
+    },
+    "relative2_id": {
+      "model": "people"
+    },
+    "relationType": {
+      "type": "enumeration",
+      "enum": [
+        "married",
+        "divorced",
+        "friends",
+        "business_partners",
+        "associates",
+        "parent_of",
+        "siblings"
+      ]
+    }
+  }
+}

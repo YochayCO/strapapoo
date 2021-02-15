@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/relationships",
+      "handler": "relationships.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/relationships/count",
+      "handler": "relationships.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/relationships/:id",
+      "handler": "relationships.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/relationships",
+      "handler": "relationships.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/relationships/:id",
+      "handler": "relationships.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/relationships/:id",
+      "handler": "relationships.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
