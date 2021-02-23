@@ -17,9 +17,17 @@
     "is_comm": {
       "type": "boolean"
     },
-    "parent_company_ownership_id": {
-      "via": "subsidiary_id",
-      "model": "company-ownerships"
+    "parent_relation": {
+      "model": "company-ownerships",
+      "via": "subsidiary"
+    },
+    "subsidiary_relations": {
+      "collection": "company-ownerships",
+      "via": "parent"
+    },
+    "owner_relations": {
+      "via": "company",
+      "collection": "ownerships"
     }
   }
 }

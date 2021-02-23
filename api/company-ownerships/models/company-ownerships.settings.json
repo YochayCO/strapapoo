@@ -11,14 +11,15 @@
     "draftAndPublish": true
   },
   "attributes": {
-    "subsidiary_id": {
-      "model": "companies",
-      "via": "parent_company_ownership_id"
-    },
     "percentage": {
       "type": "decimal"
     },
-    "parent_id": {
+    "subsidiary": {
+      "via": "parent_relation",
+      "model": "companies"
+    },
+    "parent": {
+      "via": "subsidiary_relations",
       "model": "companies"
     }
   }

@@ -11,14 +11,16 @@
     "draftAndPublish": true
   },
   "attributes": {
-    "company_id": {
-      "model": "companies"
-    },
-    "owner_id": {
-      "model": "people"
+    "owner": {
+      "model": "people",
+      "via": "owned_company_relations"
     },
     "percentage": {
       "type": "decimal"
+    },
+    "company": {
+      "model": "companies",
+      "via": "owner_relations"
     }
   }
 }
