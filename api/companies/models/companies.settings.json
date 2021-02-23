@@ -2,7 +2,8 @@
   "kind": "collectionType",
   "collectionName": "companies",
   "info": {
-    "name": "companies"
+    "name": "companies",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -15,6 +16,10 @@
     },
     "is_comm": {
       "type": "boolean"
+    },
+    "parent_company_ownership_id": {
+      "via": "subsidiary_id",
+      "model": "company-ownerships"
     }
   }
 }

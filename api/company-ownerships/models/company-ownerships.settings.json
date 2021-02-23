@@ -2,7 +2,8 @@
   "kind": "collectionType",
   "collectionName": "company_ownerships",
   "info": {
-    "name": "Company Ownerships"
+    "name": "Company Ownerships",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -10,14 +11,15 @@
     "draftAndPublish": true
   },
   "attributes": {
-    "parent_id": {
-      "model": "companies"
-    },
     "subsidiary_id": {
-      "model": "companies"
+      "model": "companies",
+      "via": "parent_company_ownership_id"
     },
     "percentage": {
       "type": "decimal"
+    },
+    "parent_id": {
+      "model": "companies"
     }
   }
 }
