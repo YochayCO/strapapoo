@@ -15,12 +15,17 @@
       "model": "people",
       "via": "owned_company_relations"
     },
-    "percentage": {
-      "type": "decimal"
-    },
     "company": {
       "model": "companies",
       "via": "owner_relations"
+    },
+    "level": {
+      "type": "enumeration",
+      "enum": [
+        "full",
+        "partial"
+      ],
+      "required": true
     }
   }
 }

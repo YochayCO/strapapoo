@@ -18,16 +18,25 @@
       "type": "boolean"
     },
     "parent_relation": {
-      "model": "company-ownerships",
-      "via": "subsidiary"
+      "via": "subsidiary",
+      "model": "company-ownerships"
     },
     "subsidiary_relations": {
-      "collection": "company-ownerships",
-      "via": "parent"
+      "via": "parent",
+      "collection": "company-ownerships"
     },
     "owner_relations": {
       "via": "company",
       "collection": "ownerships"
+    },
+    "logo_picture": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
     }
   }
 }
