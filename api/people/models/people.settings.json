@@ -2,7 +2,8 @@
   "kind": "collectionType",
   "collectionName": "people",
   "info": {
-    "name": "People"
+    "name": "People",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -14,8 +15,17 @@
       "type": "string"
     },
     "owned_company_relations": {
-      "via": "owner",
-      "collection": "ownerships"
+      "collection": "ownerships",
+      "via": "owner"
+    },
+    "picture": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
     }
   }
 }

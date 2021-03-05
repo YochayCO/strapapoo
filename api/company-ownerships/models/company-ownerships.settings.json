@@ -12,12 +12,12 @@
   },
   "attributes": {
     "subsidiary": {
-      "model": "companies",
-      "via": "parent_relation"
+      "via": "parent_relation",
+      "model": "companies"
     },
     "parent": {
-      "model": "companies",
-      "via": "subsidiary_relations"
+      "via": "subsidiary_relations",
+      "model": "companies"
     },
     "level": {
       "type": "enumeration",
