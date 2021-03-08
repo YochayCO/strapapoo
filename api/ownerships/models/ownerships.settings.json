@@ -12,15 +12,20 @@
   },
   "attributes": {
     "owner": {
-      "model": "people",
-      "via": "owned_company_relations"
-    },
-    "percentage": {
-      "type": "decimal"
+      "via": "owned_company_relations",
+      "model": "people"
     },
     "company": {
-      "model": "companies",
-      "via": "owner_relations"
+      "via": "owner_relations",
+      "model": "companies"
+    },
+    "level": {
+      "type": "enumeration",
+      "enum": [
+        "full",
+        "partial"
+      ],
+      "required": true
     }
   }
 }

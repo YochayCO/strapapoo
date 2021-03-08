@@ -11,9 +11,6 @@
     "draftAndPublish": true
   },
   "attributes": {
-    "percentage": {
-      "type": "decimal"
-    },
     "subsidiary": {
       "via": "parent_relation",
       "model": "companies"
@@ -21,6 +18,13 @@
     "parent": {
       "via": "subsidiary_relations",
       "model": "companies"
+    },
+    "level": {
+      "type": "enumeration",
+      "enum": [
+        "full",
+        "partial"
+      ]
     }
   }
 }

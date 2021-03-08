@@ -26,8 +26,17 @@
       "via": "parent"
     },
     "owner_relations": {
-      "via": "company",
-      "collection": "ownerships"
+      "collection": "ownerships",
+      "via": "company"
+    },
+    "picture": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
     }
   }
 }
