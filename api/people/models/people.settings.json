@@ -26,6 +26,12 @@
       ],
       "plugin": "upload",
       "required": false
+    },
+    "xPosition": {
+      "type": "integer"
+    },
+    "yPosition": {
+      "type": "integer"
     }
   }
 }
