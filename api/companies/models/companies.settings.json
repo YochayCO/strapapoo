@@ -43,6 +43,9 @@
     },
     "yPosition": {
       "type": "integer"
+    },
+    "group_company": {
+      "model": "companies"
     }
   }
 }
