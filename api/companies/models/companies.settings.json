@@ -46,6 +46,38 @@
     },
     "group_company": {
       "model": "companies"
+    },
+    "formal_name": {
+      "type": "string",
+      "required": false,
+      "unique": true
+    },
+    "organization_type": {
+      "type": "enumeration",
+      "enum": [
+        "company",
+        "non_profit_organization",
+        "abroad_company",
+        "public_benefit_company",
+        "regulation_organization",
+        "governmental_organization"
+      ],
+      "default": "company",
+      "required": true
+    },
+    "site_url": {
+      "type": "string"
+    },
+    "tags": {
+      "type": "component",
+      "repeatable": true,
+      "component": "tag.tags"
+    },
+    "network_section_id": {
+      "type": "integer"
+    },
+    "contract_url": {
+      "type": "string"
     }
   }
 }

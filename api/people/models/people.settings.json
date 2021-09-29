@@ -32,6 +32,30 @@
     },
     "yPosition": {
       "type": "integer"
+    },
+    "formal_name": {
+      "type": "string"
+    },
+    "site_url": {
+      "type": "string"
+    },
+    "tags": {
+      "type": "component",
+      "repeatable": true,
+      "component": "tag.tags"
+    },
+    "network_section_id": {
+      "type": "integer"
+    },
+    "importance": {
+      "type": "integer",
+      "default": 1,
+      "required": true,
+      "max": 10,
+      "min": 1
+    },
+    "is_group_of_people": {
+      "type": "boolean"
     }
   }
 }
