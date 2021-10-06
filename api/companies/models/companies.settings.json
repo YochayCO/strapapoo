@@ -8,7 +8,7 @@
   "options": {
     "increments": true,
     "timestamps": true,
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
   "attributes": {
     "name": {
@@ -18,16 +18,16 @@
       "type": "boolean"
     },
     "parent_relation": {
-      "model": "company-ownerships",
-      "via": "subsidiary"
+      "via": "subsidiary",
+      "model": "company-ownerships"
     },
     "subsidiary_relations": {
-      "collection": "company-ownerships",
-      "via": "parent"
+      "via": "parent",
+      "collection": "company-ownerships"
     },
     "owner_relations": {
-      "collection": "ownerships",
-      "via": "company"
+      "via": "company",
+      "collection": "ownerships"
     },
     "picture": {
       "model": "file",

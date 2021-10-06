@@ -8,16 +8,16 @@
   "options": {
     "increments": true,
     "timestamps": true,
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
   "attributes": {
     "subsidiary": {
-      "via": "parent_relation",
-      "model": "companies"
+      "model": "companies",
+      "via": "parent_relation"
     },
     "parent": {
-      "via": "subsidiary_relations",
-      "model": "companies"
+      "model": "companies",
+      "via": "subsidiary_relations"
     },
     "level": {
       "type": "enumeration",
